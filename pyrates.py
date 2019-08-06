@@ -50,9 +50,9 @@ def get_rates(base_currency = "", currencies = "", print_debug = False, return_d
 
     if return_dict:
         if print_debug:
-            print(rates_dict + "\n")
+            print(rates_dict)
         return rates_dict
     else:
         if print_debug:
-            print(json_dump + "\n")
+            print(json_dump)
         return json_dump
