@@ -16,7 +16,7 @@ Python3 + requests module (howto: https://2.python-requests.org/en/master/user/i
   - base_currency (str) - select base currency for conversion; EUR by default
   - currencies (str or list) - currency/list of currencies to get rates for; all by default
   - single_date (str) - date for which the rates should be provided (`YYYY-MM-DD` format expected; current date by default
-  - date_interval (list) - interval for which the rates should be provided (list of two values in the same format as for single date expected); empty by default and has priority if used together with `single_date` parameter
+  - [WIP - not implemented yet] date_interval (list) - interval for which the rates should be provided (list of two values in the same format as for single date expected); empty by default and has priority if used together with `single_date` parameter
   - print_debug (boolean) - prints debug description for easier debugging - this description contains API request url, api status code and more; False by default
   - return_dict (boolean) - determines if dictionary or json should be returned. If `True` dictionary, if `False` json is returned; `True` by default  
 
@@ -91,7 +91,7 @@ output:
 3. Get some rates as json with base currency USD:
 code:
 ```
-dict = get_rates(base_currency = "usd", currencies = ["eur", "chf", "gbp"], return_dict = False)
+json = get_rates(base_currency = "usd", currencies = ["eur", "chf", "gbp"], return_dict = False)
 ```
 output:
 ```
@@ -109,7 +109,12 @@ output:
 3. Get some rates as json with base currency USD and single date set to `2019-05-22`:
 code:
 ```
-dict = get_rates(base_currency = "usd", currencies = ["eur", "chf", "gbp"], single_date = "2019-05-22", return_dict = False)
+dict = get_rates(
+  base_currency = "usd",
+  currencies = ["eur", "chf", "gbp"],
+  single_date = "2019-05-22", 
+  return_dict = False
+)
 
 ```
 output:
@@ -128,7 +133,13 @@ output:
 4. Get some rates as json with base currency USD and single date set to `2019-05-22` and debug description:
 code:
 ```
-dict = get_rates(base_currency = "usd", currencies = ["eur", "chf", "gbp"], single_date = "2019-05-22", print_debug = True, return_dict = False)
+json = get_rates(
+  base_currency = "usd",
+  currencies = ["eur", "chf", "gbp"],
+  single_date = "2019-05-22",
+  print_debug = True,
+  return_dict = False
+)
 ```
 console-printed output:
 ```
