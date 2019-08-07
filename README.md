@@ -72,6 +72,7 @@ output:
 ```
 
 2. Get some currencies rates as dictionary:
+
 code:
   ```
   dict = get_rates(currencies = ["usd", "chf", "gbp"])
@@ -89,6 +90,7 @@ output:
 ```
 
 3. Get some rates as json with base currency USD:
+
 code:
 ```
 json = get_rates(base_currency = "usd", currencies = ["eur", "chf", "gbp"], return_dict = False)
@@ -107,6 +109,7 @@ output:
 ```
 
 3. Get some rates as json with base currency USD and single date set to `2019-05-22`:
+
 code:
 ```
 dict = get_rates(
@@ -131,6 +134,7 @@ output:
 ```
 
 4. Get some rates as json with base currency USD and single date set to `2019-05-22` and debug description:
+
 code:
 ```
 json = get_rates(
